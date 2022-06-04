@@ -18,7 +18,7 @@
 //}
 //};
 
-enum EngineType { Diesel, Petrol };
+enum class EngineType { Diesel, Petrol };
 
 class Car 
 {
@@ -29,13 +29,14 @@ class Car
 
 	public:
 		void oilChange();
+		void setEngineType(EngineType engineType);
 	};
-	Engine engine;
+	Engine engine;//pole w klasie Car
+
 public:
+	Car(EngineType engineType);
 	void annualService();
-	void oilChange() {
-		engine.oilChange();
-	}
+	void oilChange();
 };
 
 

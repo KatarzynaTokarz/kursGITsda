@@ -3,7 +3,7 @@
 
 int main()
 {
-	Car audi;
+	Car audi(EngineType::Diesel);
 	audi.oilChange();
 	audi.annualService();
 }
